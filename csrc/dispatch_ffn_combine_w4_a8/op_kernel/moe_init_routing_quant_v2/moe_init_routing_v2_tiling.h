@@ -141,9 +141,6 @@ protected:
   inline void Tiling4VBSOneCoreCompute(InnerMoeV2VBSComputeTilingData* tilingData);
   virtual bool IsFullLoad() = 0;
 
-
-
-
   int64_t aivNum = 0;
   int64_t sortLoopMaxElement = 0;
   int64_t mrgSortListMaxElement = 2040;
@@ -193,8 +190,6 @@ inline uint64_t InnerMoeInitRoutingV2TilingBase::GetTilingKey() const {
   }
   return tilingKey_;
 }
-
-
 
 inline bool InnerMoeInitRoutingV2TilingBase::GetShapeAttrsInfo(int64_t m, int64_t cols, int64_t topK, int64_t expertCapacity, 
   int64_t expertNum, int64_t activateNum, int64_t dropPadMode, int64_t expertTokensCountOrCumsumFlag,

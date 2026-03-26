@@ -45,14 +45,6 @@ namespace {
 
 namespace optiling {
 
-// static int32_t CeilDev(int32_t num, int32_t div)
-// {
-//     if (div == 0) {
-//         return 0;
-//     }
-//     return (num + div - 1) / div;
-// }
-
 static ge::graphStatus DispatchFFNCombineW4A8CheckAttrAndSetTiling(gert::TilingContext *context, DispatchFFNCombineW4A8Info& info)
 {
     auto attrs = context->GetAttrs();
@@ -86,8 +78,6 @@ static ge::graphStatus DispatchFFNCombineW4A8CheckAttrAndSetTiling(gert::TilingC
 
 static ge::graphStatus DispatchFFNCombineW4A8CheckShapeAndSetTiling(gert::TilingContext *context, DispatchFFNCombineW4A8Info &info)
 {
-    // const char *nodeName = context->GetNodeName();
-
     const gert::StorageShape *aStorageShape = context->GetInputShape(X_INDEX);
     auto expertIdxTensor = context->GetDynamicInputTensor(EXPERTID_INDEX, 0);
     uint32_t M = aStorageShape->GetStorageShape().GetDim(0);
